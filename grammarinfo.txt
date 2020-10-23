@@ -1,0 +1,59 @@
+:::: TERMINAL/NT LIST ::::
+
+SEMICOLON ID COMMA LBRACE RBRACE EQUAL NUM PLUS MINUS MULT DIV output input WHILE IF GREATER LESS NOTEQUAL SWITCH FOR LPAREN RPAREN CASE COLON DEFAULT program var_section body inputs id_list stmt_list stmt assign_stmt while_stmt if_stmt switch_stmt for_stmt output_stmt input_stmt primary expr op condition relop case_list default_case case num_list
+
+:::: FIRST SETS ::::
+
+FIRST(program) = { ID }
+FIRST(var_section) = { ID }
+FIRST(body) = { LBRACE }
+FIRST(inputs) = { NUM }
+FIRST(id_list) = { ID }
+FIRST(stmt_list) = { ID, output, input, WHILE, IF, SWITCH, FOR }
+FIRST(stmt) = { ID, output, input, WHILE, IF, SWITCH, FOR }
+FIRST(assign_stmt) = { ID }
+FIRST(while_stmt) = { WHILE }
+FIRST(if_stmt) = { IF }
+FIRST(switch_stmt) = { SWITCH }
+FIRST(for_stmt) = { FOR }
+FIRST(output_stmt) = { output }
+FIRST(input_stmt) = { input }
+FIRST(primary) = { ID, NUM }
+FIRST(expr) = { ID, NUM }
+FIRST(op) = { PLUS, MINUS, MULT, DIV }
+FIRST(condition) = { ID, NUM }
+FIRST(relop) = { GREATER, LESS, NOTEQUAL }
+FIRST(case_list) = { CASE }
+FIRST(default_case) = { DEFAULT }
+FIRST(case) = { CASE }
+FIRST(num_list) = { NUM }
+
+:::: FOLLOW SETS ::::
+
+FOLLOW(program) = { $ }
+FOLLOW(var_section) = { LBRACE }
+FOLLOW(body) = { ID, RBRACE, NUM, output, input, WHILE, IF, SWITCH, FOR, CASE, DEFAULT }
+FOLLOW(inputs) = { $ }
+FOLLOW(id_list) = { SEMICOLON }
+FOLLOW(stmt_list) = { RBRACE }
+FOLLOW(stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(assign_stmt) = { ID, RBRACE, NUM, output, input, WHILE, IF, SWITCH, FOR, RPAREN }
+FOLLOW(while_stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(if_stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(switch_stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(for_stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(output_stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(input_stmt) = { ID, RBRACE, output, input, WHILE, IF, SWITCH, FOR }
+FOLLOW(primary) = { SEMICOLON, LBRACE, PLUS, MINUS, MULT, DIV, GREATER, LESS, NOTEQUAL }
+FOLLOW(expr) = { SEMICOLON }
+FOLLOW(op) = { ID, NUM }
+FOLLOW(condition) = { SEMICOLON, LBRACE }
+FOLLOW(relop) = { ID, NUM }
+FOLLOW(case_list) = { RBRACE, DEFAULT }
+FOLLOW(default_case) = { RBRACE }
+FOLLOW(case) = { RBRACE, CASE, DEFAULT }
+FOLLOW(num_list) = { $ }
+
+:::: NT RULES THAT DONT SATISFY PP ::::
+
+switch_stmt, id_list, case_list, stmt_list, assign_stmt, num_list
