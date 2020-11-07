@@ -1,0 +1,18 @@
+a,b,c,d;
+{
+    input a;
+    input b;
+
+    FOR ( c = 10; c > 0; c = c - 1; )
+    {
+        output a;
+        output c;
+
+        FOR (d = 2; d > 0; d = d - 1;)
+        {
+            output b;
+            output d;
+        }
+    }
+}
+420 69

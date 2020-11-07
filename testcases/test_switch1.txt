@@ -1,0 +1,34 @@
+a,b;
+{
+
+input a;
+
+    WHILE a <> 1 {
+        
+        SWITCH a {
+            CASE 5:
+            {
+                output a;
+            }
+            CASE 4:
+            {
+                output a;
+            }
+            CASE 3:
+            {
+                output a;
+            }
+            CASE 2:
+            {
+                output a;
+            }
+            CASE 1:
+            {
+                output a;
+            }
+        }
+
+        input a;
+    }
+}
+5 4 3 2 1

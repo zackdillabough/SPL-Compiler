@@ -1,0 +1,68 @@
+a,b;
+{
+
+input a;
+input b;
+
+    WHILE a <> 1 {
+        
+        SWITCH a {
+            CASE 5:
+            {
+                output a;
+            }
+            CASE 4:
+            {
+                WHILE b > 0 {
+                    SWITCH b {
+                        CASE 5:
+                        {
+                            output b;
+                            output b;
+                            output b;
+                            output b;
+                            output b;
+                        }
+
+                        CASE 4:
+                        {
+                            output b;
+                            output b;
+                            output b;
+                            output b;
+                        }
+                        
+                        CASE 3:
+                        {
+                            output b;
+                            output b;
+                            output b;
+                        }
+
+                        DEFAULT:
+                        {
+                            output b;
+                        }
+                    }
+
+                    b = b - 1;
+                }
+            }
+            CASE 3:
+            {
+                output a;
+            }
+            CASE 2:
+            {
+                output a;
+            }
+            CASE 1:
+            {
+                output a;
+            }
+        }
+
+        a = a - 1;
+    }
+}
+5 10 3 2 1

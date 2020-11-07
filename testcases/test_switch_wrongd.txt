@@ -1,0 +1,40 @@
+a,b;
+{
+
+input a;
+
+    WHILE a <> 10 {
+
+        SWITCH a {
+            CASE 5:
+            {
+                output a;
+            }
+            CASE 4:
+            {
+                output a;
+            }
+            DEFAULT:
+            {
+                a = a + 11;
+                output a;
+            }
+            CASE 3:
+            {
+                output a;
+            }
+            CASE 2:
+            {
+                output a;
+            }
+            CASE 1:
+            {
+                output a;
+            }
+        }
+
+        a = a - 1;
+    }
+}
+5 4 3 2 1
+
