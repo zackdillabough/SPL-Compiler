@@ -29,8 +29,10 @@ Variables are declared at the top of a file (before the body section) with the f
 This section is enclosed in curly-brackets.
 
 The body section can consist of the following statements:
-  
-### 1.) variable initialization
+
+---
+
+### 1.) Variable Initialization
 
 &nbsp;&nbsp;&nbsp;&nbsp;**form 1 - initialization from input section:** ```input <variable name>;```
 
@@ -46,7 +48,9 @@ The body section can consist of the following statements:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G will equal 5 at execution-time.
 
-### 2.) basic arithmetic operations
+---
+
+### 2.) Basic Arithmetic Operations
 
 &nbsp;&nbsp;&nbsp;&nbsp;**form:** ```<var> = <var or literal> <operator> <var or literal>;```
 
@@ -58,7 +62,9 @@ The body section can consist of the following statements:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.) ```x = 7 / 2;  \\ x now holds the value of 3```
 
-### 3.) boolean logic and conditional/looping statements
+---
+
+### 3.) Boolean Logic and Conditional/Looping statements
 
 &nbsp;&nbsp;&nbsp;&nbsp;**if form:** ```IF <variable or name> <boolean operator> <variable or name> { <statements> }```
 
@@ -82,7 +88,9 @@ SWITCH a {
 }
 ```
 
-### 4.) output statements
+---
+
+### 4.) Output Statements
 
 &nbsp;&nbsp;&nbsp;&nbsp;**form:** ```output <variable>;```
 
